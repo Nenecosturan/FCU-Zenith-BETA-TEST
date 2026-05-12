@@ -156,7 +156,16 @@ LoadingText.BackgroundTransparency = 1
 LoadingText.Text = "Değişiklikler düzeltiliyor..."
 LoadingText.TextColor3 = Theme.Accent
 LoadingText.Font = Enum.Font.GothamBold  -- DÜZELTME: string değil Enum
-LoadingText.TextSize = 16-- ============================================================================
+LoadingText.TextSize = 16--
+ -- ============================================================================
+-- DÜZELTME: Content önceden declare ediliyor
+-- (BÖLÜM 4'ün en sonuna, BÖLÜM 5'ten önce ekle)
+-- ============================================================================
+
+-- İçerik alanı burada declare ediliyor, BÖLÜM 8'de oluşturulacak
+-- UI fonksiyonları bu değişkeni kapatma (closure) yoluyla görecek
+local Content  -- Kasıtlı olarak boş bırakıldı       
+        ============================================================================
 -- BÖLÜM 5: UI YARDIMCI FONKSİYONLARI
 -- ============================================================================
 
@@ -651,7 +660,7 @@ end)-- =========================================================================
 -- BÖLÜM 8: İÇERİK ALANI & ANA KONTROLLER
 -- ============================================================================
 
-local Content = Instance.new("ScrollingFrame", Main)
+Content = Instance.new("ScrollingFrame", Main)
 Content.Size = UDim2.new(1, -20, 1, -65)
 Content.Position = UDim2.new(0, 10, 0, 55)
 Content.BackgroundTransparency = 1
