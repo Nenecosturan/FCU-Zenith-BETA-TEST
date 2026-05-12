@@ -658,9 +658,9 @@ UserInputService.InputEnded:Connect(function(input)
     end
 end)-- ============================================================================
 -- BÖLÜM 8: İÇERİK ALANI & ANA KONTROLLER
--- ============================================================================
+-- ===========================================================================
 
-Content = Instance.new("ScrollingFrame", Main)
+local Content = Instance.new("ScrollingFrame", Main)
 Content.Size = UDim2.new(1, -20, 1, -65)
 Content.Position = UDim2.new(0, 10, 0, 55)
 Content.BackgroundTransparency = 1
